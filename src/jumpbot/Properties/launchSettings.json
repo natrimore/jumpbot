@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "jumpbot": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "JUMPBOT_ENVIRONMENT": "development"
+      }
+    }
+  }
+}
