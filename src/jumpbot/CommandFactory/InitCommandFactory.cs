@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using jumpbot.Commands.Abstract;
+using System;
+using Telegram.Bot.Types;
 
 namespace jumpbot.CommandFactory
 {
-    class InitCommandFactory
+    public class InitCommandFactory : ITelegramCommandFactory
     {
+        private readonly IServiceProvider _serviceProvider;
+
+        public InitCommandFactory(IServiceProvider serviceProvider)
+        {
+            _serviceProvider = serviceProvider ??
+                throw new ArgumentNullException(nameof(serviceProvider));
+        }
+        public ICommand CreateCommand(Message command)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
